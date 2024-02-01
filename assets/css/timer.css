@@ -1,0 +1,28 @@
+#contents {
+    margin: 0 auto;
+}
+
+.scoreboard .scoreboard__col {
+    flex: 0 0 42%;
+}
+
+.scoreboard .scoreboard__center {
+    flex: 0 0 6%;
+}
+
+@font-face {
+    font-family: LigatureSymbols;
+    src: url("../font/LigatureSymbols-2.11.ttf") format("truetype");
+}
+
+.icon {
+    font-family: LigatureSymbols;
+    font-size: 4em;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.icon.options::before {
+    content: "\E055";
+}

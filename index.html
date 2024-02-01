@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Billiard Timer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/timer.css">
+</head>
+<body>
+
+<main id="contents" class="w-full h-screen">
+    <div class="h-screen w-screen flex justify-center items-center grid grid-cols-1">
+        <div class="scoreboard flex w-full h-full m-0">
+            <div class="scoreboard__col flex flex-col justify-center items-center w-full h-full">
+                <div class="scoreboard__name flex items-center justify-center m-2">
+                    <div class="scoreboard__name-main font-bold text-6xl text-gray-600">
+                        <span id="left-player-name"></span>
+                    </div>
+                    <div class="scoreboard__name-sub text-4xl text-gray-600">
+                        <span id="left-player-win-score"></span>
+                    </div>
+                </div>
+                <div class="scoreboard__score flex items-center justify-center font-bold text-[15rem] m-2">
+                    <p id="left-score">1</p>
+                </div>
+                <div class="scoreboard__plus flex items-center justify-center m-4">
+                    <button type="button" id="left-score-minus-btn"
+                            class="scoreboard__minus-button bg-gray-500 hover:bg-gray-700 text-white font-bold py-3 px-4 mx-3 rounded text-xl">
+                        -
+                    </button>
+                    <button type="button" id="left-score-plus-btn"
+                            class="scoreboard__plus-button text-4xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-10 mx-3 rounded">
+                        +
+                    </button>
+                </div>
+                <div id="left-timer" class="scoreboard__timer flex items-center justify-center p-8">
+                    <div class="scoreboard__timer-text">
+                        <p id="left-timer-text" class="font-bold text-6xl">00:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scoreboard__center flex flex-col justify-center items-center w-full h-full">
+                <label class="icon options">
+                    <button hidden></button>
+                </label>
+            </div>
+            <div class="scoreboard__col flex flex-col justify-center items-center w-full h-full">
+                <div class="scoreboard__name flex items-center justify-center m-2">
+                    <div class="scoreboard__name-main font-bold text-6xl text-gray-600">
+                        <span id="right-player-name">いいいい</span>
+                    </div>
+                    <div class="scoreboard__name-sub text-4xl text-gray-600">
+                        <span id="right-player-win-score"></span>
+                    </div>
+                </div>
+                <div class="scoreboard__score flex items-center justify-center font-bold text-[15rem] m-2">
+                    <p id="right-score">2</p>
+                </div>
+                <div class="scoreboard__plus flex items-center justify-center m-4">
+                    <button type="button" id="right-score-minus-btn"
+                            class="scoreboard__minus-button bg-gray-500 hover:bg-gray-700 text-white font-bold py-3 px-4 mx-3 rounded text-xl">
+                        -
+                    </button>
+                    <button type="button" id="right-score-plus-btn"
+                            class="scoreboard__plus-button text-4xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-10 mx-3 rounded">
+                        +
+                    </button>
+                </div>
+                <div id="right-timer" class="scoreboard__timer flex items-center justify-center p-8">
+                    <div class="scoreboard__timer-text">
+                        <p id="right-timer-text" class="font-bold text-6xl">00:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<script src="assets/js/timer.js"></script>
+</html>
