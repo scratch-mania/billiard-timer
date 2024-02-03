@@ -3,11 +3,11 @@
 }
 
 .scoreboard .scoreboard__col {
-    flex: 0 0 42%;
+    flex: 0 0 45%;
 }
 
 .scoreboard .scoreboard__center {
-    flex: 0 0 6%;
+    flex: 0 0 10%;
 }
 
 @font-face {
@@ -21,6 +21,7 @@
     cursor: pointer;
     margin: 0;
     padding: 0;
+    color: white
 }
 
 .icon.options::before {
